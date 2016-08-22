@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ylp-0Q-M8R">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UITestingExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E3B-29-BBx">
+                                <rect key="frame" x="20" y="120" width="560" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Username"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1bf-Fo-tHn">
+                                <rect key="frame" x="20" y="169" width="560" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Password"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJj-bo-gum">
+                                <rect key="frame" x="281" y="215" width="38" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Login Button"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Qc-BZ-Uvu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BJj-bo-gum" firstAttribute="top" secondItem="1bf-Fo-tHn" secondAttribute="bottom" constant="16" id="2xc-Ax-KhS"/>
+                            <constraint firstItem="1bf-Fo-tHn" firstAttribute="trailing" secondItem="E3B-29-BBx" secondAttribute="trailing" id="48w-63-2hC"/>
+                            <constraint firstItem="1bf-Fo-tHn" firstAttribute="leading" secondItem="E3B-29-BBx" secondAttribute="leading" id="K6D-nu-vYA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="E3B-29-BBx" secondAttribute="trailing" id="KPF-kj-aAT"/>
+                            <constraint firstItem="BJj-bo-gum" firstAttribute="centerX" secondItem="1bf-Fo-tHn" secondAttribute="centerX" id="Vga-Zq-hL5"/>
+                            <constraint firstItem="E3B-29-BBx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ytt-PZ-kYv"/>
+                            <constraint firstItem="1bf-Fo-tHn" firstAttribute="top" secondItem="E3B-29-BBx" secondAttribute="bottom" constant="19" id="n3g-zF-kUk"/>
+                            <constraint firstItem="E3B-29-BBx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="56" id="xl0-5S-8Fq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="RS4-na-uji"/>
+                    <connections>
+                        <outlet property="btnLogin" destination="BJj-bo-gum" id="BWZ-Va-ec5"/>
+                        <outlet property="tfPassword" destination="1bf-Fo-tHn" id="B01-LU-nSk"/>
+                        <outlet property="tfUsername" destination="E3B-29-BBx" id="6rj-98-Xms"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055" y="324"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QBk-qG-HJ4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ylp-0Q-M8R" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kKG-uh-mfo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9qn-pr-7oD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iUq-sF-cgL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144" y="-368"/>
+        </scene>
+    </scenes>
+</document>
